@@ -1,0 +1,32 @@
+Data: The dataset has future merchant transaction activity, for merchants that start over a 2 year period (2033-2034). The data spans from 1/1/33 through 12/31/34. Although the data is made up, you can consider this to be a random sample of future merchants using Stripe. Each observation is a transaction amount in cents. If the merchant stops processing with Stripe, then they would no longer appear.  
+
+Questions:
+
+We have limited data on these merchants and their transactions, but we are still interested in understanding their payments activity to try to infer the types of merchants using Stripe. Using only the given data, how would you identify different kinds of businesses in the sample? Please generate assignments for each merchant.
+Sometimes a merchant may stop processing with Stripe, which we call churn. We are interested in identifying and predicting churn. Please a) come up with a concrete definition for churn b) identify merchants that have already churned in the dataset, and c) build a model to predict which active merchants are most likely to churn in the near future.
+Dataset here.
+
+We’re interested in how you solve business problems and your technical skills. Please include how we can apply this work and how that guides your analysis choices.
+
+We're interested in your creativity with the data as well as how you communicate the results/insights. Please submit a write-up of your results in a format that can be presented to business teams (document or slides) as well as your code (Python or R). If you continue to the onsite interview, we will ask you to present your findings from your written project. Please don’t spend more than 4-6 hours on the project.
+
+Please don't include your name in either the filename or body of your submission. If you'd like to include an HTML file as part of your submission, please upload it as part of a zip file. Finally, please provide an estimate of how much time you spent on the project.
+
+ 
+Questions for Stripe - 
+Nature of relationship of these merchants sith Stripe
+I want to understand how well these payments represent the overall business activity for each merchant. This is critical because if a large part of the payments made to these customers is off Stripe, the conclusions we can draw about them based on this data can be inaccurate(especially for merchant categorization).
+Can we make broad general assumptions about the proportion of payments these customers accept without using Stripe? Or is there a heuristic to detect which merchants have a fair portion of their payments going through Stripe?
+
+Kind of business categorization
+I would love to understand how we will use this categorization. I think that will largely determine how I approach this problem. 
+For example, one dimension to categorize these merchants would be the nature of goods or services offered by them. This could help us assess the risk and volatility of their payment activity which in turn will inform the nature of our engagement with them(pricing, minimum volume commitments, etc.)
+Another dimension could be the total amount and regularity of payments these merchants receive through Stripe. Breaking merchants down this dimension might reveal a set of customers who have low engagement with us currently but show potential. We might then design strategies to address these customers.
+A broad description of the use case will give me a sense of the approach I should take.
+
+The Churn prediction model
+Again, I would love to understand the outcome we are trying to improve and how this model would help. That will inform a lot of the choices I will make during the training and evaluation of the model. 
+For example, this model could be used to have interventions for customers with a high probability of churn or to forecast future revenue for Stripe using the probability of churn for each merchant as an input.
+
+Timezones
+What is the timezone for the "time" field? Can I assume that all the merchants operate in the same timezone, which is the timezone for the "time" column?
